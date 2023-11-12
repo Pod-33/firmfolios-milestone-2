@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
 
         val client = AsyncHttpClient()
         val apiKey = "c66c5dad-395c-4ec6-afdf-7b78eb94166a"
-        val limit = 10
+//        val limit = 10
 
-        client.get("https://api.orb-intelligence.com/3/search/?api_key=$apiKey&limit=$limit", object : JsonHttpResponseHandler() {
+        client.get("https://api.orb-intelligence.com/3/match/?api_key=$apiKey", object : JsonHttpResponseHandler() {
             override fun onSuccess(statusCode: Int, headers: Headers, json: JsonHttpResponseHandler.JSON) {
                 Log.d("API", "Response successful")
                 Log.d("API", "Data: $json ")
@@ -83,4 +83,3 @@ class MainActivity : AppCompatActivity() {
 
 
 }
-
