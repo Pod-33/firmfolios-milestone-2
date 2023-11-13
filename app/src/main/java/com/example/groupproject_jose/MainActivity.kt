@@ -24,24 +24,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+Log.d("MainActivity","On create called")
         recyclerView = findViewById(R.id.recycleView_layout)
         companyNameEditText = findViewById(R.id.companyNameEditText)
         countryEditText = findViewById(R.id.countryEditText)
         searchButton = findViewById(R.id.searchButton)
-//        compNameTextView = findViewById(R.id.compName)
-//        descriptionTextView = findViewById(R.id.description)
-
-        // Create a CompanyAdapter and set it to the RecyclerView
         companyAdapter = CompanyAdapter(mutableListOf())
         recyclerView.adapter = companyAdapter
-
-        // Set a LinearLayoutManager to the RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         searchButton.setOnClickListener {
             val companyName = companyNameEditText.text.toString()
             val country = countryEditText.text.toString()
+            clearRecyclerView()
             apiInfo(companyName, country)
         }
     }
@@ -85,30 +80,40 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun parseCompanies(jsonObject: JSONObject): List<Company> {
+        Log.d("JSON Response", jsonObject.toString())
         val companies = mutableListOf<Company>()
         val resultsArray = jsonObject.optJSONArray("results")
+        Log.d("Parsing", "Parsed")
 
         resultsArray?.let {
             for (i in 0 until it.length()) {
                 val companyObject = it.optJSONObject(i)
+                Log.d("JSON Company Object", companyObject.toString())
                 val company = Company(
                     name = companyObject.optString("name", ""),
-                    description = companyObject.optString("description", ""),
+                    address = companyObject.optString("address1", "No address available"),
                     status = companyObject.optString("company_status", ""),
                     country = companyObject.optString("country", ""),
-                    address = companyObject.optJSONObject("address")?.optString("address1", "") ?: ""
+                    fetchUrl = companyObject.optString("fetch_url", "")
                 )
+                Log.d("JSON", "making objects")
+                Log.d("JSON", "Description: ${company.address}, Website: ${company.fetchUrl}")
                 companies.add(company)
+                Log.d("JSON", "adding objects")
             }
         }
 
         return companies
     }
 
-    private fun updateRecyclerView(companies: List<Company>) {
-        companyAdapter.setData(companies)
-    }
 
+
+    private fun updateRecyclerView(companies: List<Company>) {
+        runOnUiThread {
+            companyAdapter.setData(companies)
+            Log.d("Adapter", "Setting data")
+        }
+    }
     private fun buildUrl(baseUrl: String, params: Map<String, String>): String {
         val queryString = params.entries.joinToString("&") { (key, value) ->
             "$key=${value.encodeUrl()}"
@@ -121,6 +126,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun String.encodeUrl(): String {
+        Log.d("Encoding","String Encoded")
         return URLEncoder.encode(this, "UTF-8")
     }
+    private fun clearRecyclerView() {
+        recyclerView.smoothScrollToPosition(0)
+    }
+
 }

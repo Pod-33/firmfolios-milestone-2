@@ -18,9 +18,9 @@
         app:layout_constraintVertical_bias="0.007" />
 
     <TextView
-        android:id="@+id/description"
-        android:layout_width="280dp"
-        android:layout_height="41dp"
+        android:id="@+id/address"
+        android:layout_width="322dp"
+        android:layout_height="67dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,14 +31,14 @@
 
     <TextView
         android:id="@+id/compStatus"
-        android:layout_width="278dp"
-        android:layout_height="56dp"
+        android:layout_width="300dp"
+        android:layout_height="74dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintTop_toBottomOf="@+id/address"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -54,9 +54,9 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/address"
-        android:layout_width="284dp"
-        android:layout_height="77dp"
+        android:id="@+id/website"
+        android:layout_width="413dp"
+        android:layout_height="75dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
