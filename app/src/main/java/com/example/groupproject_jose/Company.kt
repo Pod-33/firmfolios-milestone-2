@@ -1,4 +1,9 @@
 package com.example.groupproject_jose
 
-class Company(var compName: String, val address: String, val description: String, var compStatus: String, var country: String) {
-}
+data class Company(
+    val name: String,
+    val description: String,
+    val status: String,
+    val country: String,
+    val address: String
+)
