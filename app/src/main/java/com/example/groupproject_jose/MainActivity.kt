@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
@@ -37,6 +38,10 @@ Log.d("MainActivity","On create called")
             val companyName = companyNameEditText.text.toString()
             val country = countryEditText.text.toString()
             clearRecyclerView()
+            Toast.makeText(
+                applicationContext,"Loading...", Toast.LENGTH_LONG
+            )
+                .show()
             apiInfo(companyName, country)
         }
     }
