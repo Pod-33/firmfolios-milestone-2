@@ -1,4 +1,5 @@
 PROJECT SPEC DOCUMENT
+**Firm Folios**
 
 Table of Contents
 App Overview
@@ -50,6 +51,7 @@ https://imgur.com/a/UlFO6fE
 Build Notes
 Here’s a place for any other notes on the app, it’s creation
 process, or what you learned this unit!
+<img src="https://postimg.cc/TpbjcgPT" width=600>
 
 For Milestone 2, include 2+ Videos/GIFs of the build process here!
 Gif1 - https://imgur.com/a/g8wNcZe
