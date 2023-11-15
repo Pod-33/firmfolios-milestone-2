@@ -1,19 +1,24 @@
 <!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
 
-# AND101 Milestone 1 - **Team/App Name**
+# AND101 Milestone 2 - **FirmFolios**
 
 Submitted by:
-- **Team Member 1 Name Here**
-- **Team Member 2 Name Here**
-- **etc**
+- **Carlos Guzman**
+- **Kenneth Gonzalez**
+- **Jose Huertero**
+- **Junlin Chen**
+- **Yousif Abdeljawad**
+- **Mackenzie Eng**
 
-Time spent: **X** hours spent in total
+Time spent: **12** hours spent in total
+
+## Video demonstration link for the app
+
+https://drive.google.com/file/d/1FDHtuGj1cyAAy2vdGEKgOHjHyj9WbWfS/view?usp=sharing
 
 ## Summary
 
-This document provides an overview, project spec, and wireframes for our team's capstone project: An app that **short description of your app**
-
-If we had to describe this milestone in three (3) emojis, they would be: **emojis here**
+This document provides a summary of our project building process for our app, **is made by students for students transitioning from academia into the professional world. It provides only the most relevent company/firm information that would be useful when looking for a position or preparing for a behavorial inteview for one.**
 
 ## Milestone Requirements
 
@@ -21,28 +26,35 @@ If we had to describe this milestone in three (3) emojis, they would be: **emoji
 
 The following REQUIRED features are completed:
 
-- [ ] Creation of GitHub Organization and Group Project Repo
-- [ ] Updated Course Portal group info with Group Name and App Description
+- [x] Assign features to each member of your group
+- [x] Establish a goal time for completing each feature
 
 The following REQUIRED files are included:
 
-- [ ] Included 📄 `brainstorming.md`, which contains:
-  - [ ] Our initial brainstorming ideas (6+ ideas)
-  - [ ] 5-category evaluation of our top 3 ideas
-  - [ ] Final app idea chosen
-- [ ] Included 📄 `project_spec.md`, which contains:
-  - [ ] App Overview: Description and evaluation
-  - [ ] App Spec: User features, Chosen API(s), User Interactions
-  - [ ] Wireframe image(s)
+- [x] Updated 📄 `project_spec.md`, which contains:
+  - [X] App Overview (Milestone 1)
+  - [X] App Spec (Milestone 1)
+  - [x] Checked off 2+ completed features
+  - [x] 2+ Videos/GIFs of build progress
 
-The following BONUS features are implemented:
-
-- [ ] Added digital wireframe/mockup image(s)
-- [ ] Added a Video/GIF of an interactive prototype
+- [ ] Our 🎥 Demo Video
+  - [ ] We have also added the Demo Video Link to the Group Info Form on the course portal.
 
 The following EXTRA features are implemented:
 
 - [ ] List anything else that you added to improve your submission!
+
+## 🎥 Demo Video
+
+Here's a video that demos all of the app's implemented features:
+
+<img src='https://imgur.com/l3kVbWU.gif' title='Video Demo' width='' alt='Video Demo' />
+
+A home screen was added to greet the user.
+
+<img src='https://imgur.com/Ak8GW1m.gif' title='Video Demo' width='' alt='Video Demo' />
+
+VIDEO created with **your chosen video tool**
 
 ## Notes
 
